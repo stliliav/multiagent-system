@@ -6,13 +6,13 @@ from langchain_community.llms import Ollama
 from langgraph.graph import StateGraph, END
 
 # 1. LLM models setup (routing and engine by Ollama)
-# Routing principle: light model for classification, heavy model for code generation
+# routing principle: light model for classification, heavy model for code generation
 router_llm = Ollama(model="mistral:7b", temperature=0.0)
 worker_llm = Ollama(model="qwen2.5:7b", temperature=0.1)
 validator_llm = Ollama(model="qwen2.5:7b", temperature=0.0)
 
 
-# 2. System state schema
+# 2. system state schema
 class AgentState(TypedDict):
     user_query: str
     task_complexity: str  # "simple" | "complex"
@@ -24,11 +24,11 @@ class AgentState(TypedDict):
     final_output: str
 
 
-# 3. agent skills (Integrated Tools)
+# 3. agent skills (Integrated tools)
 def skill_inspect_ast(code: str) -> Dict[str, Any]:
 
-    #Skill file: AST static code inspector and security check.
-    #Checks syntax errors and blocks forbidden call executions in sandbox
+    # skill file: AST static code inspector and security check.
+    # checks syntax errors and blocks forbidden call executions in sandbox
 
     try:
         parsed_ast = ast.parse(code)
@@ -45,7 +45,7 @@ def skill_inspect_ast(code: str) -> Dict[str, Any]:
 
 
 def skill_memory_extractor(query: str) -> Dict[str, str]:
-    #Skill file: extracts user preferences/entities for long-term memory
+    # skill file: extracts user preferences/entities for long-term memory
 
     facts = {}
     if "python" in query.lower():
