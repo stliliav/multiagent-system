@@ -1,0 +1,43 @@
+2026-11-14 18:25:35,521 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:25:35,704 | INFO | {"event": "span", "node": "router", "latency_sec": 23.751, "complexity": "simple", "routed_to": "mistral:7b"}
+2026-11-14 18:25:57,909 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:26:49,996 | INFO | {"event": "span", "node": "worker", "latency_sec": 74.295, "model": "mistral:7b", "attempt": 1}
+2026-11-14 18:26:50,003 | INFO | {"event": "span", "node": "verifier", "latency_sec": 0.005, "status": "SANDBOX_REJECTED", "stderr": "Sandbox Error: [Errno 2] No such file or directory: 'docker'"}
+2026-11-14 18:27:24,363 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:28:00,340 | INFO | {"event": "span", "node": "worker", "latency_sec": 70.339, "model": "qwen2.5:7b", "attempt": 2}
+2026-11-14 18:28:00,440 | INFO | {"event": "span", "node": "verifier", "latency_sec": 0.041, "status": "SANDBOX_REJECTED", "stderr": "Sandbox Error: [Errno 2] No such file or directory: 'docker'"}
+2026-11-14 18:28:00,712 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:28:35,430 | INFO | {"event": "span", "node": "worker", "latency_sec": 34.987, "model": "qwen2.5:7b", "attempt": 3}
+2026-11-14 18:28:35,452 | INFO | {"event": "span", "node": "verifier", "latency_sec": 0.014, "status": "SANDBOX_REJECTED", "stderr": "Sandbox Error: [Errno 2] No such file or directory: 'docker'"}
+2026-11-14 18:28:35,454 | ERROR | {"event": "ALERT", "title": "Max Retries Reached", "details": "Query 'Write a Python function for binary search handling empty lists and duplicates.' failed: Runtime Error: Sandbox Error: [Errno 2] No such file or directory: 'docker'"}
+2026-11-14 18:33:23,554 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:33:23,712 | INFO | {"event": "span", "node": "router", "latency_sec": 11.756, "complexity": "simple", "routed_to": "mistral:7b"}
+2026-11-14 18:33:49,035 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:35:32,842 | INFO | {"event": "span", "node": "worker", "latency_sec": 129.14, "model": "mistral:7b", "attempt": 1}
+2026-11-14 18:35:37,708 | INFO | {"event": "span", "node": "verifier", "latency_sec": 4.86, "status": "SANDBOX_PASSED"}
+2026-11-14 18:36:10,535 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:36:32,685 | INFO | {"event": "span", "node": "judge", "latency_sec": 54.988, "score": 0.9, "approved": true}
+2026-11-14 18:37:44,695 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:37:46,665 | INFO | {"event": "span", "node": "router", "latency_sec": 6.799, "complexity": "simple", "routed_to": "mistral:7b"}
+2026-11-14 18:37:52,230 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:38:42,839 | INFO | {"event": "span", "node": "worker", "latency_sec": 56.175, "model": "mistral:7b", "attempt": 1}
+2026-11-14 18:38:43,665 | INFO | {"event": "span", "node": "verifier", "latency_sec": 0.821, "status": "SANDBOX_REJECTED", "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\nAssertionError"}
+2026-11-14 18:39:25,349 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:39:59,570 | INFO | {"event": "span", "node": "worker", "latency_sec": 75.907, "model": "qwen2.5:7b", "attempt": 2}
+2026-11-14 18:40:00,273 | INFO | {"event": "span", "node": "verifier", "latency_sec": 0.698, "status": "SANDBOX_PASSED"}
+2026-11-14 18:40:24,260 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:40:51,457 | INFO | {"event": "span", "node": "judge", "latency_sec": 51.186, "score": 0.9, "approved": true}
+2026-11-14 18:40:59,010 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:41:04,331 | INFO | {"event": "span", "node": "router", "latency_sec": 12.72, "complexity": "simple", "routed_to": "mistral:7b"}
+2026-11-14 18:41:14,079 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:43:57,022 | INFO | {"event": "span", "node": "worker", "latency_sec": 172.709, "model": "mistral:7b", "attempt": 1}
+2026-11-14 18:43:57,680 | INFO | {"event": "span", "node": "verifier", "latency_sec": 0.65, "status": "SANDBOX_PASSED"}
+2026-11-14 18:44:06,003 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:44:58,031 | INFO | {"event": "span", "node": "judge", "latency_sec": 60.356, "score": 0.9, "approved": true}
+2026-11-14 18:45:02,789 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:45:04,649 | INFO | {"event": "span", "node": "router", "latency_sec": 6.528, "complexity": "complex", "routed_to": "qwen2.5:7b"}
+2026-11-14 18:45:43,939 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:46:57,940 | INFO | {"event": "span", "node": "worker", "latency_sec": 113.302, "model": "qwen2.5:7b", "attempt": 1}
+2026-11-14 18:46:59,063 | INFO | {"event": "span", "node": "verifier", "latency_sec": 1.059, "status": "SANDBOX_PASSED"}
+2026-11-14 18:47:33,111 | INFO | HTTP Request: POST http://host.docker.internal:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 18:48:08,773 | INFO | {"event": "span", "node": "judge", "latency_sec": 69.706, "score": 0.9, "approved": true}
